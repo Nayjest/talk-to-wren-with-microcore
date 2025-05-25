@@ -8,7 +8,7 @@ solution (Wren) into a custom agent using
 import asyncio, logging, microcore as mc
 async def main():
     logging.basicConfig(level=logging.INFO)
-    mc.configure(USE_LOGGING=True, INTERACTIVE_SETUP=True, MCP_SERVERS=[{"name": "wren", "url": "ws://localhost:8000/mcp/"}])
+    mc.configure(USE_LOGGING=True, MCP_SERVERS=[{"name": "wren", "url": "ws://localhost:8000/mcp/"}])
     mcp = await mc.mcp_server("wren").connect()
     messages = [mc.prompt("""
         [Task]
