@@ -146,3 +146,11 @@ LLM Response:
 The final answer is:
  The quantity of customers is 77.
 ```
+
+## Running custom MCP server from this repo:
+```bash
+python wren_mcp.py
+```
+Code expects following ENV variables:
+- WREN_API_KEY
+- WREN_PROJECT_ID
