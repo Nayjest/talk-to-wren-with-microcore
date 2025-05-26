@@ -18,7 +18,7 @@ async def main():
         {{tools}}
         """, question=input("Ask your data: "), tools=mcp.tools, remove_indent=True
     ).as_system]
-    while (llm_answer := mc.llm(messages)).contains_valid_json():
+    while (llm_answer := mc.llm(messages)).is_tool_call():
         messages += [llm_answer.as_assistant, await mcp.exec(llm_answer)]
     print("The final answer is:\n", mc.ui.magenta(llm_answer))
 asyncio.run(main())
