@@ -1,4 +1,4 @@
-# Talk to your Database using Wren AI & AI Microcore
+# Talk to your Database using Wren AI Service and AI-Microcore python library
 
 This is example of minimalistic 16-line LLM-agnostic integration of the "Talk to your data" 
 solution (Wren) into a custom agent using
